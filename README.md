@@ -12,6 +12,33 @@ A production-ready RAG system for airline domain questions featuring hybrid retr
 - **Semantic Chunking**: Docling-powered document processing with 300-500 token chunks
 - **Production Ready**: Robust error handling, logging, and configuration management
 
+## System Architecture
+
+```mermaid
+flowchart TD
+subgraph Ingestion
+  A[Document Ingestion] --> B[Docling Parser]
+  B --> C[Semantic Chunking]
+end
+
+C --> D[RAG Orchestrator]
+
+subgraph Interfaces
+  D --> E[Streamlit UI]
+  D --> F[Google Embeddings]
+end
+
+subgraph Retrieval
+  D --> G[Hybrid Retriever]
+  G --> H[Qdrant Vector Store]
+  G --> I[BM25 Reranker]
+end
+
+G --> J[Gemini 2.5 Flash]
+J --> K[LLM Judge Evaluation]
+G --> L[Evaluation Dashboard]
+```
+
 ## 📋 System Architecture
 
 ```
