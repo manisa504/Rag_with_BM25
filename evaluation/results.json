@@ -1,0 +1,48 @@
+[
+  {
+    "question": "What are the key differences between BADA 3 and BADA 4 aircraft performance models in terms of complex flight operations?",
+    "answer": "The key differences between BADA 3 and BADA 4 aircraft performance models in terms of complex flight operations are primarily related to their ability to support, model, and simulate these operations with sufficient realism and accuracy.\n\nHere are the key differences:\n\n*   **Support for Complex Instructions and Operating Regimes:**\n    *   BADA 4 can be successfully used with complex flight instructions and operating regimes, such as economy climb, cruise, and descent based on cost index, maximum range cruise, long range cruise, optimum altitude, and maximum endurance cruise [advanced-aircraft-performance-model-for-atm-bada-2010].\n    *   The use of BADA 3 with complex instructions is limited due to its insufficient level of realism and accuracy [advanced-aircraft-performance-model-for-atm-bada-2010]. While theoretically treatable with BADA 3, its realism, accuracy, and complexity are limiting factors, resulting in poor quality results [advanced-aircraft-performance-model-for-atm-bada-2010].\n\n*   **Realism and Accuracy:**\n    *   BADA 4 offers improved realism and accuracy, which enables its use with complex instructions [advanced-aircraft-performance-model-for-atm-bada-2010]. This improvement is due to the enhanced accuracy and realism of the underlying aircraft forces, including better estimation of drag, thrust, and fuel [advanced-aircraft-performance-model-for-atm-bada-2010].\n    *   BADA 3's realism and accuracy are insufficient for complex instructions, leading to limitations in its applicability for such operations [advanced-aircraft-performance-model-for-atm-bada-2010].\n\n*   **Modeling Capabilities:**\n    *   BADA 4 supports the modeling of complex operations and operating regimes, such as maximum range cruise or economy cruise, due to its improved accuracy and realism of underlying aircraft forces [advanced-aircraft-performance-model-for-atm-bada-2010].\n    *   BADA 4 also models more operating configurations than BADA 3 [advanced-aircraft-performance-model-for-atm-bada-2010].\n\n*   **Independent Use of Sub-models:**\n    *   Both BADA families can have their sub-models, such as the Thrust model, used independently. However, BADA 4 is suitable if high accuracy is requested, whereas BADA 3 is only acceptable if low accuracy is sufficient [advanced-aircraft-performance-model-for-atm-bada-2010].\n\nIn summary, BADA 4 represents a significant improvement over BADA 3 for modeling and simulating complex flight operations, offering greater realism and accuracy, which expands its utility into areas like strategic planning and optimizations [advanced-aircraft-performance-model-for-atm-bada-2010].",
+    "reference_answer": "BADA 4 has significantly improved realism and accuracy compared to BADA 3, enabling support for complex flight operations like economy climb, cruise and descent based on cost index, maximum range cruise, and optimum altitude operations. While BADA 3 has limited capability for these complex operations due to insufficient accuracy and realism, BADA 4 can successfully model these advanced functions. The improved accuracy of BADA 4's underlying aircraft forces, including accurate estimation of drag, thrust and fuel consumption, supports modeling of complex operations that are not feasible with BADA 3.",
+    "accuracy": 0.5,
+    "relevance": 0.5,
+    "completeness": 0.5,
+    "source_quality": 0.5,
+    "justification": "Scores extracted from unstructured response",
+    "query_time_s": 9.446725845336914,
+    "judge_time_s": 8.968265056610107,
+    "total_time_s": 18.41499090194702,
+    "not_in_corpus": false,
+    "num_citations": 4,
+    "token_usage": {
+      "total_tokens": 2872,
+      "prompt_tokens": 2070,
+      "completion_tokens": 624
+    },
+    "retrieval_time_s": 0.4483377933502197,
+    "generation_time_s": 8.99820613861084,
+    "overall_score": 0.5
+  },
+  {
+    "question": "How does Cost Index (CI) affect aircraft economic cruise speed and what is the typical range of CI values?",
+    "answer": "The Cost Index (CI) significantly affects an aircraft's economic cruise speed, known as the economic Mach number (MECON) [advanced-aircraft-performance-model-for-atm-bada-2010].\n\nHere's how CI affects economic cruise speed:\n\n*   **Minimization of Total Cost:** CI cruise management determines an optimum cruise speed (MECON) that minimizes the total cost of the cruise phase (Ct) [advanced-aircraft-performance-model-for-atm-bada-2010]. This minimization is performed for given values of CI, aircraft weight (W), cruise geopotential pressure altitude (Hp), and atmospheric conditions (temperature deviation from ISA) [advanced-aircraft-performance-model-for-atm-bada-2010].\n*   **Trade-off between Time and Fuel Costs:** The fundamental rationale of the CI concept is to achieve minimum flight trip cost by balancing operating costs per hour (time-related costs) and incremental fuel burn (fuel-related costs) [advanced-aircraft-performance-model-for-atm-bada-2010]. CI itself is defined as the ratio between time and fuel related costs [advanced-aircraft-performance-model-for-atm-bada-2010].\n*   **Influence on MECON Calculation:** The determination of MECON involves minimizing the economy cruise cost function (ECCF), which incorporates fuel consumption (F), flown distance (∆r), ground speed (vgr), and the CI [advanced-aircraft-performance-model-for-atm-bada-2010]. The procedure explicitly finds MECON for a *given CI* [advanced-aircraft-performance-model-for-atm-bada-2010].\n*   **Extreme CI Values and Their Impact:**\n    *   **CI = 0:** This extreme value represents the \"minimum fuel mode\" (where time-related costs are much less significant than fuel-related costs, CT << CF) [advanced-aircraft-performance-model-for-atm-bada-2010]. An ECON setting with CI equal to zero (CI0) is equivalent to operating at Maximum Range Cruise (MRC) speed [applicability-modern-apm-to-traj-opt].\n    *   **CI = CImax:** This extreme value represents the \"minimum flight time mode\" (where time-related costs are much more significant than fuel-related costs, CT >> CF) [advanced-aircraft-performance-model-for-atm-bada-2010].\n    Therefore, a lower CI will result in a slower economic cruise speed aimed at conserving fuel, while a higher CI will result in a faster economic cruise speed aimed at reducing flight time.\n\nThe typical range of CI values usually varies from **0 to 99 or 999 [kg/min]**, depending on the aircraft manufacturer [advanced-aircraft-performance-model-for-atm-bada-2010]. Typical CI values used by airlines are generally comprised between CI0 (equivalent to MRC) and CILRC (approximating Long Range Cruise) [applicability-modern-apm-to-traj-opt].",
+    "reference_answer": "Cost Index (CI) is defined as the ratio between time-related and fuel-related costs (CT/CF) measured in kg/min. The range of CI values typically varies from 0 to 99 or 999 kg/min depending on the aircraft manufacturer. A higher CI results in higher economic Mach number (MECON) - meaning faster cruise speeds to minimize time costs. CI = 0 represents minimum fuel mode (maximum fuel efficiency), while maximum CI represents minimum flight time mode. For example, CI = 20 means the cost of 20 kg of fuel equals the cost of 1 flight minute.",
+    "accuracy": 0.5,
+    "relevance": 0.5,
+    "completeness": 0.5,
+    "source_quality": 0.5,
+    "justification": "Scores extracted from unstructured response",
+    "query_time_s": 13.455083131790161,
+    "judge_time_s": 10.032871961593628,
+    "total_time_s": 23.48795509338379,
+    "not_in_corpus": false,
+    "num_citations": 5,
+    "token_usage": {
+      "total_tokens": 3275,
+      "prompt_tokens": 1849,
+      "completion_tokens": 680
+    },
+    "retrieval_time_s": 0.3632209300994873,
+    "generation_time_s": 13.091637134552002,
+    "overall_score": 0.5
+  }
+]
